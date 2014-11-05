@@ -11,7 +11,7 @@ This image keeps up to date with curator releases and has tags in docker registr
 Image entrypoint is set to curator script, so just run the image:
 
 ```
-docker run --rm bobrik/curator:2.0.2
+docker run --rm bobrik/curator:2.0.2 --help
 ```
 
 Pick whatever version you need.
