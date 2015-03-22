@@ -1,10 +1,6 @@
-FROM debian:wheezy
-MAINTAINER Ian Babrou <ibobrik@gmail.com>
+FROM alpine:3.1
 
-RUN apt-get update && \
-    apt-get -y upgrade && \
-    apt-get install --no-install-recommends -y python2.7 python-pip
+RUN apk --update add python py-pip && \
+    pip install elasticsearch-curator==3.0.1
 
-RUN pip install elasticsearch-curator==2.1.1
-
-ENTRYPOINT ["/usr/bin/python", "/usr/local/lib/python2.7/dist-packages/curator/curator_script.py"]
+ENTRYPOINT ["/usr/bin/curator"]
