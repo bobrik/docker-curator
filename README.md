@@ -27,7 +27,7 @@ when starting up the curator container to automatically set the
 provided by Docker:
 
 ```
-docker run -d --name myElasticsearch elasticsearch:latest
+docker run -d --name myElasticSearch elasticsearch:latest
 docker run --rm --link myElasticSearch:elasticsearch bobrik/curator:3.0.3 show indices --all-indices
 ```
 
