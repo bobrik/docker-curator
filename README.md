@@ -14,7 +14,7 @@ resulting in a just 50mb image.
 Image entrypoint is set to curator script, so just run the image:
 
 ```
-docker run --rm bobrik/curator:3.2.0 --help
+docker run --rm bobrik/curator:3.3.0 --help
 ```
 
 Pick whatever version you need.
