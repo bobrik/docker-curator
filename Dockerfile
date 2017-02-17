@@ -5,4 +5,6 @@ RUN apk --update add python py-setuptools py-pip && \
     apk del py-pip && \
     rm -rf /var/cache/apk/*
 
-ENTRYPOINT ["/usr/bin/curator"]
+ADD ./curator-entrypoint.sh /curator-entrypoint.sh
+
+ENTRYPOINT ["/curator-entrypoint.sh"]
